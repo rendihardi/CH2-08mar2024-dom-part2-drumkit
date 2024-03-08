@@ -1,13 +1,9 @@
-function handleClick() {
-  alert("Handle Klik");
-}
-
 var drumButtons = document.querySelectorAll(".drum");
-console.log(drumButtons);
 
 for (let i = 0; i < drumButtons.length; i++) {
   drumButtons[i].addEventListener("click", function () {
     let btnInnerHTML = this.innerHTML;
+    makeSound(btnInnerHTML);
     buttonAnimation(btnInnerHTML);
   });
 }
